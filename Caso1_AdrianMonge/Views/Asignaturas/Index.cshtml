@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Caso1_AdrianMonge.Models.Asignaturas>
+
+@{
+    ViewBag.Title = "Gestor de Asignaturas";
+}
+
+<h2>Gestor de Asignaturas</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CarreraProfesional)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoAsignatura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreAsignatura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Creditos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CuatrimestreAcademico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HorasSemanales)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DuracionSemanas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Inicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Termino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Docente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarreraProfesional)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoAsignatura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreAsignatura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Creditos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CuatrimestreAcademico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HorasSemanales)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DuracionSemanas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Inicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Termino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Docente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
